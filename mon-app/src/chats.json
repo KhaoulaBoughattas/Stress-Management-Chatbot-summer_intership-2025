@@ -1,0 +1,52 @@
+{
+  "5xSZH6dlpF4Oo3ybJAYu": {
+    "message": "bonjour je suis stressé",
+    "reply": "Je comprends. C'est difficile de se sentir stressé. Êtes-vous à l'aise de partager un peu ce qui vous trouble ? Pas de pression pour répondre à tout, juste un petit mot si vous le souhaitez.",
+    "model": "gemma3:1b",
+    "language": "fr",
+    "timestamp": {
+      "_seconds": 1755474786,
+      "_nanoseconds": 379000000
+    }
+  },
+  "6gyAfzmZLCJm4dmec0eb": {
+    "message": "bonjout",
+    "reply": "Très bien, c'est un bon début. Qu'est-ce qui vous amène aujourd'hui ?",
+    "model": "gemma3:1b",
+    "language": "fr",
+    "timestamp": {
+      "_seconds": 1755474715,
+      "_nanoseconds": 178000000
+    }
+  },
+  "DyCI4MzLv5qYQMVqPzSk": {
+    "message": "bonjourr",
+    "reply": "Bonjour à vous aussi. Comment allez-vous aujourd'hui ?",
+    "model": "gemma3:1b",
+    "language": "fr",
+    "timestamp": {
+      "_seconds": 1755473167,
+      "_nanoseconds": 188000000
+    }
+  },
+  "U5RiPs5Zn0u1NQ4gkrua": {
+    "message": "bonjour",
+    "reply": "Bonjour à toi aussi. Comment se porte aujourd'hui ?",
+    "model": "gemma3:1b",
+    "language": "fr",
+    "timestamp": {
+      "_seconds": 1755468655,
+      "_nanoseconds": 967000000
+    }
+  },
+  "sHm27rzZKha6X4mPxr0f": {
+    "message": "hello",
+    "reply": "Hello à vous aussi.  Je suis là pour vous écouter.  N'hésitez pas à me dire ce qui vous préoccupe.",
+    "model": "gemma3:1b",
+    "language": "fr",
+    "timestamp": {
+      "_seconds": 1755540214,
+      "_nanoseconds": 11000000
+    }
+  }
+}

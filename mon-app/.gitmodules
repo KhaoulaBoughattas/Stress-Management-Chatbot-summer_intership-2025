@@ -1,0 +1,6 @@
+[submodule "backend"]
+	path = backend
+	url = https://github.com/WiemSayeh/pfa-alimii.git
+[submodule "mon-app"]
+	path = mon-app
+	url = https://github.com/WiemSayeh/pfa-alimii.git

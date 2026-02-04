@@ -1,0 +1,69 @@
+.logout-button {
+  position: fixed;
+  bottom: 5%; /* Position adaptable à l’écran */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+
+  padding: 12px 28px;
+  font-size: clamp(14px, 2vw, 16px); /* S'adapte à l’écran */
+  font-weight: 600;
+  letter-spacing: 0.5px;
+
+  color: white;
+  border: none;
+  border-radius: 50px; /* Capsule */
+  cursor: pointer;
+
+  /* Dégradé rouge élégant */
+  background: linear-gradient(135deg, #ff4d4d, #d93636);
+
+  /* Ombres pour effet relief */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  /* Animation fluide */
+  transition: all 0.3s ease;
+}
+
+.logout-button:hover {
+  background: linear-gradient(135deg, #d93636, #b82b2b);
+  transform: translateX(-50%) scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.logout-button:active {
+  transform: translateX(-50%) scale(0.97);
+}
+
+/* Mobile optimisé */
+@media (max-width: 600px) {
+  .logout-button {
+    padding: 10px 22px;
+    font-size: 14px;
+    bottom: 15px;
+  }
+}
+.footer-image-container {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.footer-image {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  opacity: 0.9;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.footer-image:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .footer-image {
+    max-width: 150px;
+  }
+}

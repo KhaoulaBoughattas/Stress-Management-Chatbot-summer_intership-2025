@@ -1,0 +1,484 @@
+/* Medecin.css */
+
+html, body {
+  height: 100%;
+  background-color: #f9f9f9;
+  color: #333;
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+    height: auto;
+
+}
+/* Reset de base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Conteneur principal */
+.medecin-container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #e3f2fd, #ffffff);
+  color: #222;
+  display: flex;
+  flex-direction: column;
+}
+
+/* RTL support */
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+.medecin-container.rtl .navbar-center,
+.medecin-container.rtl .navbar-left,
+.medecin-container.rtl .navbar-right {
+  text-align: right;
+}
+
+.medecin-container.rtl .form-row {
+  flex-direction: row-reverse;
+}
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1976d2;
+  color: rgb(10, 10, 10);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    flex-wrap: wrap;
+
+}
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+.navbar-left h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.navbar-logo {
+  width: 50px;
+  height: auto;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar-button {
+  background-color: #2196f3;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.navbar-button:hover {
+  background-color: #1565c0;
+}
+.navbar-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.navbar-center {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+    transition: text-decoration 0.2s ease;
+
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+
+/* Language selector */
+.language-selector {
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+
+/* Responsive */
+@media (max-width: 480px) {
+  .auth-form-container {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .navbar-right {
+    justify-content: center;
+  }
+}
+/* === HERO SECTION MÉDECIN === */
+.med-hero-section {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #e6f0ff, #ffffff);
+  height: 100vh; /* prend toute la hauteur de l'écran */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centre verticalement */
+  align-items: center;     /* centre horizontalement */
+}
+
+.med-hero-section h1 {
+  margin-top: 1rem;
+  font-size: 2rem;
+  color: #121212;
+}
+
+.med-hero-section p {
+  max-width: 600px;
+  margin: 1rem auto;
+  color: #555;
+}
+
+.med-hero-image {
+  max-width: 180px;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+.med-hero-image:hover {
+  transform: scale(1.1);
+}
+
+/* === SERVICES SECTION MÉDECINS === */
+.med-services-section {
+  padding: 2rem 4rem;
+  max-height: 100vh;       /* limite à la hauteur de l'écran */
+  overflow-y: auto;        /* permet de scroller si contenu trop grand */
+  box-sizing: border-box;  /* inclut le padding dans la hauteur */
+  text-align: center;
+}
+
+.med-services-section h2 {
+  text-align: center;
+  color: #0b0c0c;
+  margin-bottom: 2rem;
+}
+
+/* Conteneur flex : cards à gauche, image à droite */
+.med-services-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* aligne en haut */
+  gap: 3rem;
+  flex-wrap: wrap; /* pour mobile */
+}
+
+/* Grille des cards */
+.med-services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 500px; /* largeur max des cartes */
+}
+
+.med-service-card {
+  background-color: white;
+  padding: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: left;
+  font-size: 1.1rem;
+  transition: transform 0.2s ease;
+}
+.med-service-card h2 {
+  color: #0d0d0e;
+  font-size: 1.8rem;
+  text-align: center;
+  font-size: larger;
+}
+.med-service-card h3 {
+  color: #0056b3;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.med-service-card p {
+  color: #555;
+  font-size: 1.05rem;
+}
+
+.med-service-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Image à droite */
+.med-service-img {
+  flex-basis: 55%;       /* prend plus de place dans le flex */
+  max-width: 600px;      /* élargir encore l'image */
+  margin-left: 2rem;     /* espace à gauche pour la pousser plus à droite */
+  flex-shrink: 0;
+}
+
+.med-services-illustration {
+  width: 100%;
+  height: auto;
+  max-height: 100vh;     /* occupe presque toute la hauteur de l’écran */
+  border-radius: 8px;
+  display: block;
+  object-fit: cover;     /* remplit l’espace */
+}
+
+/* Responsive : image sous les cards sur mobile */
+@media (max-width: 768px) {
+  .med-services-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .med-service-img {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .med-services-illustration {
+    max-height: 50vh; /* éviter que ce soit trop grand sur mobile */
+  }
+}
+/* === INFO SECTION MÉDECIN === */ 
+.med-info-section {
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #e6f0ff, #ffffff);
+  text-align: center;
+  min-height: 100vh; /* occupe toute la hauteur de l'écran */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.med-info-section h2 {
+  color: #101111;
+  font-size: 2.5rem;
+  margin-bottom: 0.9rem;
+}
+
+.med-info-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+/* Contenu : image + texte côte à côte */
+.med-info-content {
+  display: flex;
+  align-items: center; /* centre verticalement l'image et le texte */
+  justify-content: flex-start; /* pousse l'image plus à gauche */
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.med-info-img {
+  flex-shrink: 0;
+  margin-left: -40px; /* déplace un peu plus l'image à gauche */
+}
+
+.med-info-image {
+  max-width: 300px; /* image un peu plus grande */
+  height: auto;
+}
+
+.med-info-text {
+  flex: 1;
+}
+
+/* Avantages */
+.med-info-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.feature-item {
+  flex: 1 1 calc(33.333% - 1rem);
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: center;
+  min-width: 200px;
+}
+
+.feature-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.feature-item h3 {
+  font-size: 1.2rem;
+  color: #0056b3;
+  margin-bottom: 0.5rem;
+}
+
+.feature-item p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.med-info-btn:hover {
+  background-color: #003f82;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .med-info-section {
+    padding: 2rem 1rem;
+    min-height: auto; /* éviter trop d'espace vide sur mobile */
+  }
+
+  .med-info-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .med-info-img {
+    margin-left: 0;
+  }
+
+  .feature-item {
+    flex: 1 1 100%;
+  }
+}
+.med-contact-section {
+  padding: 3rem 2rem;
+  background: linear-gradient(180deg, #eaf4ff, #ffffff);
+}
+
+.med-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.med-contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1100px;
+  margin: auto;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.med-contact-info {
+  flex: 1;
+  min-width: 280px;
+}
+
+.med-contact-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.med-contact-info p {
+  margin-bottom: 1rem;
+  color: #444;
+  text-align: left;
+}
+
+.med-contact-image {
+  max-width: 250px;
+  margin-top: 1rem;
+}
+
+.med-contact-form {
+  flex: 1;
+  min-width: 300px;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.med-input-field {
+  padding: 0.9rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.med-textarea-field {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.med-submit-button {
+  background: linear-gradient(90deg, #0056ff, #0040b3);
+  color: white;
+  border: none;
+  padding: 0.9rem;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.med-submit-button:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .med-contact-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .med-contact-form {
+    width: 100%;
+  }
+
+  .med-contact-image {
+    margin: auto;
+  }
+}
