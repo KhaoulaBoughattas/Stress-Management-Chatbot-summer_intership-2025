@@ -19,3 +19,11 @@ __pycache__/
 dist/ 
 build/ 
 *.log 
+backend/models/
+backend/vosk-model-fr-0.22/
+*.bin
+*.pt
+*.model
+*.json
+vocab.json
+merges.txt
